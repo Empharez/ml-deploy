@@ -1,0 +1,8 @@
+matplotlib==2.2.5
+pandas==1.0.0
+numpy==1.18.1
+pylab==0.0.2
+imbalanced_learn==0.6.2
+seaborn==0.10.0
+imblearn==0.0
+scikit_learn==0.22.2.post1
