@@ -16,6 +16,7 @@ import pickle
 data = pd.read_csv("asset/paysim.csv")
 df = pd.DataFrame(data)
 
+
 n_by_payment = df.groupby("paymentMode").count()
 
 print(n_by_payment)

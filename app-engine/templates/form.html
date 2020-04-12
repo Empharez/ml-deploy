@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Fraud Analysis</title>
+  </head>
+  <body>
+    <div class="mt-4">
+    <div class="row justify-content-md-center">
+        <h3 class="col-sm-4">Fraud Analysis</h3>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <form class="col-sm-4" action="{{ url_for('analyze') }}" method="POST">
+            <div class="form-group">
+              <label for="Funder">Funder Account</label>
+              <input type="text" class="form-control" id="funder" name="FUNDER_ACCT" placeholder="Enter funder account number">
+            </div>
+            <div class="form-group">
+              <label for="Beneficiary">Beneficiary Account</label>
+              <input type="text" class="form-control" id="beneficiary" name="BENEF_ACCT" placeholder="Enter beneficiary account number">
+            </div>
+            <div class="form-group">
+                <label for="paymentMode">Payment Mode</label>
+                <select class="form-control" id="" name="PAYMENTMODE">
+                    <option value="1">Card</option>
+                    <option value="2">Cash</option>
+                    <option value="3">Pos</option>
+                    <option value="4">Web</option>
+                    <option value="5">Api</option>
+                    <option value="6">Mobile</option>
+                    <option value="7">USSD</option>
+                    <option value="8">Branch</option>
+                    <option value="9">Core</option>
+                    <option value="10">Internal</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-control" id="amount" name="AMOUNT" placeholder="Enter Amount">
+              </div>
+            <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+          </form>
+    </div>
+    
+    </div>
+  </body>
+</html>
